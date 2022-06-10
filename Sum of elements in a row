@@ -2,7 +2,7 @@
 using namespace std;
 void printSum(int arr[2][2], int i, int j)
 {
-    for (int i = 0; i < 2; i++)
+    for (int i = 0; i < 2; i++) // first because to print row wise sum
     {
         int sum = 0;
         for (int j = 0; j < 2; j++)
