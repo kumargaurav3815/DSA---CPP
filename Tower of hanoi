@@ -1,0 +1,25 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+void TOH(int n, int A, int B, int C)
+{
+    if (n == 0)
+    {
+        return;
+    }
+
+    if (n > 0)
+    {
+        TOH(n - 1, A, C, B);
+        printf("Move a disc from %d to %d\n", A, C);
+        TOH(n - 1, B, A, C);
+    }
+}
+
+int main()
+{
+    int n;
+    printf("Enter the number of discs: ");
+    scanf("%d", &n);
+    TOH(n, 1, 2, 3);
+}
